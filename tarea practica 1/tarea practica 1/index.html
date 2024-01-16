@@ -3,25 +3,27 @@
 <head>
     <meta charset="utf-8" />
     <title>Primera tarea JS</title>
-    <script>
+   
+        <script>
 
-        //calcular el indice de masa muscular
+            //calcular el indice de masa muscular
 
-        function calcIMC(altura, peso) {
-            var IMC = (peso / altura * altura);
-            return IMC
-        }
+            function calcIMC(altura, peso) {
+                var IMC = (peso / altura^2  );
+                return IMC
+            }
 
-        //funcion asociada al boton para calcular el IMC
-        function ejecutarcalcIMC() {
-            var peso = campoPeso.value;
-            var altura = campoAltura.value;
-            var result = calcIMC(peso / altura * altura); 
+            //funcion asociada al boton para calcular el IMC
+            function ejecutarcalcIMC() {
+                var peso = campoPeso.value;
+                var altura = campoAltura.value;
+                var result = calcIMC(peso / altura ^ 2 );
 
-            alert(result);
+                alert(result);
 
-        }
-    </script>
+            }
+        </script>
+    
 </head>
 <body>
     <h1>Primera tarea</h1>
@@ -33,5 +35,10 @@
     Peso:<input type="number" id="campoPeso"/>
     Altura:<input type="number" id="campoAltura"/>
     <button onclick="ejecutarcalcIMC()">calcular el IMC</button> 
+
+    <h2> primera tarea(segundo ejercicio)</h2>
+    <p>
+        introduce
+    </p>
 </body>
 </html>
