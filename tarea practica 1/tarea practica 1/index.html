@@ -9,7 +9,7 @@
             //calcular el indice de masa muscular
 
             function calcIMC(altura, peso) {
-                var IMC = (peso / altura^2  );
+                var IMC = (peso / altura ^ 2); 
                 return IMC
             }
 
@@ -17,11 +17,47 @@
             function ejecutarcalcIMC() {
                 var peso = campoPeso.value;
                 var altura = campoAltura.value;
-                var result = calcIMC(peso / altura ^ 2 );
+                var result = calcIMC(peso / altura ^ 2);
 
                 alert(result);
 
             }
+
+            //convertir de grados celsius a farenheit 
+            //primer paso 
+
+            function converCaF(temperatura) { 
+                let conversion = (temperatura + 32); 
+
+                return conversion;
+            }
+
+            // segundo paso 
+            function converCaF(conversion) { 
+                let segunda = (conversion * 5); 
+
+                return segunda;
+
+            }
+
+            //tercer paso
+
+            function converCaF(sergunda) {
+                let tercera = (segunda / 9);
+
+                return tercera;
+
+            }
+
+            //funcion asociada al botón para convertir
+
+            function ejecutarCaF() {
+                var temperatura = campotemperatura.value;
+                var result = calcCaF(temperatura);
+
+                alert(result);
+            }
+
         </script>
     
 </head>
@@ -36,9 +72,14 @@
     Altura:<input type="number" id="campoAltura"/>
     <button onclick="ejecutarcalcIMC()">calcular el IMC</button> 
 
-    <h2> primera tarea(segundo ejercicio)</h2>
+    <h2> primera tarea(segundo ejercicio) convertir de grados celsius a farenheit</h2>
     <p>
-        introduce
+        introduce el valor en grados celsius y presiona el boton 
+
+        Grados: <input type="number" id="campoGrados"/>
+        <button onclick="ejecutarconverCaF()">Convertir los grados</button>
+
+
     </p>
 </body>
 </html>
