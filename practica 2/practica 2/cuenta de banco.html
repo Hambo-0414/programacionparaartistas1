@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cuenta bancaria (estructuras)</title>
+    <script>
+
+        var miCuenta = {
+            propietario: "María Méndez",
+            saldo: 58790.10,
+            banco: "Banco de Bravos",
+
+        }
+
+        function consultarcuenta() {
+            panelResultado.innerHTmL =
+                micuenta.propietario + "," + "tienes $" + miCuenta.saldo + "en el banco" + miCuenta.banco;
+
+        }
+
+        function retirarDinero() {
+            var monto = campoMonto.value;
+            if (monto > miCuenta.saldo) {
+                panelResultado.innerHTML =
+                    "no tienes saldo insuficiente para retirar"
+
+            }
+            else {   //si el saldo es suficiente 
+                micuenta.saldo -= monto;
+                panelResultado.innerHTML =
+                    "retiraste $" + monto + "Te queda $" + miCuenta.saldo;
+            }
+        } 
+
+
+    </script>
+</head>
+<body>
+    <h1>Cuenta bancaria</h1>
+    monto:<input type="number" id=" campoMonto"/><br/>
+    <button>Depositar</button><br/>
+    <button onclick=" retirarDinero()">Retirar</button><br/>
+    <button onclick="consultarcuenta()">Consultar</button><br/>
+    <div id="panelResultado"></div>
+</body>
+</html>
