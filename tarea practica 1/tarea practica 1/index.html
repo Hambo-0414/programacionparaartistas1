@@ -26,8 +26,9 @@
             //convertir de grados celsius a farenheit 
             //primer paso 
 
-            function converCaF(temperatura) { 
-                let conversion = (temperatura + 32); 
+            function converCaF(temperatura) {
+                var temperatura 
+                let conversion = (temperatura + 32*5/9); 
 
                 return conversion;
             }
@@ -42,10 +43,11 @@
 
             //tercer paso
 
-            function converCaF(sergunda) {
+            function converCaF(segunda) {
                 let tercera = (segunda / 9);
 
                 return tercera;
+
 
             }
 
@@ -53,7 +55,7 @@
 
             function ejecutarCaF() {
                 var temperatura = campotemperatura.value;
-                var result = calcCaF(temperatura);
+                var result = calcCaF(temperatura-32*5/9);
 
                 alert(result);
             }
@@ -77,7 +79,7 @@
         introduce el valor en grados celsius y presiona el boton 
 
         Grados: <input type="number" id="campoGrados"/>
-        <button onclick="ejecutarconverCaF()">Convertir los grados</button>
+        <button onclick="converCaF()">celsius a farenheit</button>
 
 
     </p>
