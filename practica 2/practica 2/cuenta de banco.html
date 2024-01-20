@@ -14,7 +14,7 @@
 
         function consultarcuenta() {
             panelResultado.innerHTmL =
-                micuenta.propietario + "," + "tienes $" + miCuenta.saldo + "en el banco" + miCuenta.banco;
+                miCuenta.propietario + "," + "tienes $" + miCuenta.saldo + "en el banco" + miCuenta.banco;
 
         }
 
@@ -35,9 +35,9 @@
         }
 
         //depositar a la cuenta 
-        function depositaralacuenta() {
-
-            var 
+        function Depositaralacuenta() {
+            panelResultado.innerHTmL =
+                miCuenta.propietario + "," + "ingrese el monto a depositar" + miCuenta.Depositaralacuenta + "deposito exitoso" + miCuenta.saldo + "su saldo actual es" + miCuenta.banco;
         }
 
 
@@ -46,7 +46,9 @@
 <body>
     <h1>Cuenta bancaria</h1>
     monto:<input type="number" id=" campoMonto"/><br/>
-    <button onclick="depositaraalacuenta">Depositar</button><br/>
+    depositar:<input type="number" id="campoDepositar"/><br/> 
+    <button onclick="Depositaralacuenta()">Depositar</button><br/>
+    <div id="panelResultado" ></div>
     <button onclick=" retirarDinero()">Retirar</button><br/>
     <button onclick="consultarcuenta()">Consultar</button><br/>
     <div id="panelResultado"></div>
