@@ -36,21 +36,54 @@
 
         //depositar a la cuenta 
         function Depositaralacuenta() {
-            panelResultado.innerHTmL =
-                miCuenta.propietario + "," + "ingrese el monto a depositar" + miCuenta.Depositaralacuenta + "deposito exitoso" + miCuenta.saldo + "su saldo actual es" + miCuenta.banco;
+            panelResultado.innerHTML =
+                miCuenta.propietario + "," + "ingrese el monto a depositar" + miCuenta.Depositaralacuenta + "deposito exitoso,su saldo actual es" + miCuenta.saldo;
         }
+
+
+        //para ingresar el NIP
+        //si el NIP es incorrecto
+
+        function ingresarNIP() {
+            var NIP = campoNIP.value(5058); 
+            if (NIP > miCuenta.NIP) {
+                panelResultado.innerHTML =
+                    "NIP incorrecto, vuelva a intentarlo"
+
+
+            }
+
+            //si el NIP es correcto
+
+            else {
+                miCuenta.NIP = NIP; 
+                panelResultado.innerHTML =
+                    miCuenta.NIP + "," + "NIP válido" + miCuenta.propietario + "seleccione la operación que desea realizar" + miCuenta.banco; 
+            }
+
+        }
+
 
 
     </script>
 </head>
 <body>
     <h1>Cuenta bancaria</h1>
-    monto:<input type="number" id=" campoMonto"/><br/>
-    depositar:<input type="number" id="campoDepositar"/><br/> 
+
+    Monto:<input type="number" id=" campoMonto"/><br/>
+
+    Depositar:<input type="number" id="campoDepositar"/><br/> 
     <button onclick="Depositaralacuenta()">Depositar</button><br/>
     <div id="panelResultado" ></div>
+
     <button onclick=" retirarDinero()">Retirar</button><br/>
+
     <button onclick="consultarcuenta()">Consultar</button><br/>
     <div id="panelResultado"></div>
+
+    NIP:<input type="number" id="campoNIP(5058)"/><br/>
+    <button onclick="ingresarNIP()">NIP</button><br/>
+    <div id="panelResultado"></div>
+
 </body>
 </html>
