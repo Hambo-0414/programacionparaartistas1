@@ -8,6 +8,7 @@
         var miCuenta = {
             propietario: "María Méndez",
             saldo: 58790.10,
+            NIP:5058, 
             banco: "Banco de Bravos",
 
         }
@@ -21,31 +22,37 @@
         //si el saldo no es suficiente 
 
         function retirarDinero() {
-            var Monto = campoMonto.value;
-            if (Monto > miCuenta.saldo) {
+            var monto = campoMonto.value;
+            if (monto > miCuenta.saldo) {
+
                 panelResultado.innerHTML =
-                    "no tienes saldo insuficiente para retirar"
+                    "no tienes saldo suficiente para retirar."; 
 
             }
             else {   //si el saldo es suficiente 
-                micuenta.saldo -= monto;
+                miCuenta.saldo -= monto;
                 panelResultado.innerHTML =
                     "retiraste $" + monto + "Te queda $" + miCuenta.saldo;
             }
         }
 
         //depositar a la cuenta 
-        function Depositaralacuenta() {
+        function DepositarALaCuenta() {
             panelResultado.innerHTML =
-                miCuenta.propietario + "," + "ingrese el monto a depositar" + miCuenta.Depositaralacuenta + "deposito exitoso,su saldo actual es" + miCuenta.saldo;
+                miCuenta.propietario + "," + "ingrese el monto a depositar" + miCuenta.DepositarALacuenta + "deposito exitoso,su saldo actual es" + miCuenta.saldo;
         }
 
 
         //para ingresar el NIP
+
+
+
+
+
         //si el NIP es incorrecto
 
         function ingresarNIP() {
-            var NIP = campoNIP.value(5058); 
+            var NIP = campoNIP.value; 
             if (NIP > miCuenta.NIP) {
                 panelResultado.innerHTML =
                     "NIP incorrecto, vuelva a intentarlo"
@@ -70,20 +77,23 @@
 <body>
     <h1>Cuenta bancaria</h1>
 
+    <p>Agregue un monto y presione la operación que desea realizar</p>
     Monto:<input type="number" id=" campoMonto"/><br/>
 
-    Depositar:<input type="number" id="campoDepositar"/><br/> 
-    <button onclick="Depositaralacuenta()">Depositar</button><br/>
+    Depositar:<input type="number" id="campoDepositar"/><br /> 
+    <button onclick="Depositaralacuenta()">Depositar</button><br />
     <div id="panelResultado" ></div>
 
-    <button onclick=" retirarDinero()">Retirar</button><br/>
+    <button onclick=" retirarDinero()">Retirar</button><br />
 
-    <button onclick="consultarcuenta()">Consultar</button><br/>
+    <button onclick="consultarCuenta()">Consultar</button><br />
     <div id="panelResultado"></div>
 
-    NIP:<input type="number" id="campoNIP(5058)"/><br/>
+    <h2>Agregar NIP</h2>
+    <p>Introduzca su NIP</p>
+
+    NIP:<input type="number" id="campoNIP"/><br/>
     <button onclick="ingresarNIP()">NIP</button><br/>
-    <div id="panelResultado"></div>
-
+    
 </body>
 </html>
