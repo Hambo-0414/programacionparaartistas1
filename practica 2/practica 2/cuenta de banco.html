@@ -12,59 +12,60 @@
             banco: "Banco de Bravos",
 
         }
+        //funcionconsulta 
+        function consultarCuenta() {
+            panelResultado.innerHTML = miCuenta.propietario + "," + "tienes $" + miCuenta.saldo + " en elbanco " + miCuenta.banco;
+            var NiP = campoNip.value;
+            if (NiP > miCuenta.NIP) {
+              panelResultado.innerHTML = "Acceso denegado, porfavor pruebe otra vez";
+            }
+            if (NiP < miCuenta.NIP) {
+                panelResultado.innerHTML = "Acceso denegado, porfavor pruebe otra vez";
+            }
+        } 
+        
+        
 
-        function consultarcuenta() {
-            panelResultado.innerHTmL =
-                miCuenta.propietario + "," + "tienes $" + miCuenta.saldo + "en el banco" + miCuenta.banco;
-
-        }
-
-        //si el saldo no es suficiente 
-
+        
+        //funcion de retiro
         function retirarDinero() {
             var monto = campoMonto.value;
+            var NiP = campoNip.value; 
             if (monto > miCuenta.saldo) {
-
+                //sielsaldo esinsuficiente
                 panelResultado.innerHTML =
-                    "no tienes saldo suficiente para retirar."; 
-
+                    "No tienes saldo suficientepararetirar";
             }
-            else {   //si el saldo es suficiente 
+            else {//elsaldo es suficiente
                 miCuenta.saldo -= monto;
                 panelResultado.innerHTML =
-                    "retiraste $" + monto + "Te queda $" + miCuenta.saldo;
+                    "Retiraste $" + monto
+                    + ". Te queda $" + miCuenta.saldo; 
+            }
+            if (NiP > miCuenta.NIP) {
+                panelResultado.innerHTML = "Acceso denegado, porfavor pruebe otra vez";
+            }
+            if (NiP < miCuenta.NIP) {
+                panelResultado.innerHTML = "Acceso denegado, porfavor pruebe otra vez";
             }
         }
+
 
         //depositar a la cuenta 
-        function DepositarALaCuenta() {
-            var monto = campoMonto.value;
+        function DepositaraLaCuenta() {
+            var depositar = + campoMonto.value;
+            var NiP = campoNip.value; 
+            miCuenta.saldo += depositar;
             panelResultado.innerHTML =
-                miCuenta.propietario + "," + "ingrese el monto a depositar" + miCuenta.DepositarALacuenta + "deposito exitoso,su saldo actual es" + miCuenta.saldo;
+                miCuenta.propietario + "," + " ha depositado $" + depositar + ", su saldo actual es" + miCuenta.saldo;
+            if (NiP > miCuenta.NIP) {
+                panelResultado.innerHTML = "Acceso denegado, porfavor pruebe otra vez";
+            }
+            if (NiP < miCuenta.NIP) {
+                panelResultado.innerHTML = "Acceso denegado, porfavor pruebe otra vez";
+            }
         }
 
-
-        //para ingresar el NIP
-        //si el NIP es incorrecto
-
-        function ingresarNIP() {
-            var NIP = campoNIP.value; 
-            if (NIP > miCuenta.NIP) {
-                panelResultado.innerHTML =
-                    "NIP incorrecto, vuelva a intentarlo"
-
-
-            }
-
-            //si el NIP es correcto
-
-            else {
-                miCuenta.NIP = NIP; 
-                panelResultado.innerHTML =
-                    miCuenta.NIP + "," + "NIP válido" + miCuenta.propietario + "seleccione la operación que desea realizar" + miCuenta.banco; 
-            }
-
-        }
 
 
 
@@ -74,22 +75,12 @@
     <h1>Cuenta bancaria</h1>
 
     <p>Agregue un monto y presione la operación que desea realizar</p>
-    Monto:<input type="number" id=" campoMonto"/><br/>
+    Nip: <input type="number" id="campoNip" /><br />
+    Monto: <input type="number" id="campoMonto" /><br />
 
-    Depositar:<input type="number" id="campoDepositar"/><br /> 
-    <button onclick="Depositaralacuenta()">Depositar</button><br />
-    <div id="panelResultado" ></div>
-
-    <button onclick=" retirarDinero()">Retirar</button><br />
-
-    <button onclick="consultarCuenta()">Consultar</button><br />
+   <button onclick="DepositaraLaCuenta()">Depositar</button>
+   <button onclick="retirarDinero()">Retirar</button><br />
+   <button onclick="consultarCuenta()">Consultar</button>
     <div id="panelResultado"></div>
-
-    <h2>Agregar NIP</h2>
-    <p>Introduzca su NIP</p>
-
-    NIP:<input type="number" id="campoNIP"/><br/>
-    <button onclick="ingresarNIP()">NIP</button><br/>
-    
 </body>
 </html>
