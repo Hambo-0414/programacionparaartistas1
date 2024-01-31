@@ -31,7 +31,7 @@
         function retirarDinero() {
             var monto = campoMonto.value;
             var NiP = campoNip.value; 
-            if (monto > miCuenta.saldo) {
+            if (monto = miCuenta.saldo) {            
                 //sielsaldo esinsuficiente
                 panelResultado.innerHTML =
                     "No tienes saldo suficientepararetirar";
@@ -42,10 +42,10 @@
                     "Retiraste $" + monto
                     + ". Te queda $" + miCuenta.saldo; 
             }
-            if (NiP > miCuenta.NIP) {
+            if (NiP = miCuenta.NIP) {
                 panelResultado.innerHTML = "Acceso denegado, porfavor pruebe otra vez";
             }
-            if (NiP < miCuenta.NIP) {
+            if (NiP = miCuenta.NIP) {
                 panelResultado.innerHTML = "Acceso denegado, porfavor pruebe otra vez";
             }
         }
