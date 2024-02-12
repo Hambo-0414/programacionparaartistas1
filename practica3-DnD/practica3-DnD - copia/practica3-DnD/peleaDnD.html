@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Pelea DnD</title>
+    <script>
+
+        //aqui va javascript
+
+        var dragon = {
+            nombre: "Dragon de las montañas",
+            hp: 200,
+            atk: 50,
+            def: 10,
+            exper:100,
+
+        }
+
+        var guerrera = {
+            nombre: "Guerrera de las sombras",
+            hp: 75,
+            atk: 20,
+            def: 10,
+            exper:20, 
+        }
+
+        var caballero = {
+            nombre: "Caballero real",
+            hp: 80,
+            atk: 15,
+            def: 8,
+            exper:15, 
+        }
+
+        function guerreraAtaca() {
+            console.log("La Guerrera ataca");
+            dragon.hp -= guerrera.atk - dragon.def;
+            console.log(dragon.nombre + "tiene" + dragon.hp + "de HP");
+            if (dragon.hp <= 0) {
+                dragon.hp = 0;
+                repartirExperiencia();
+                alert("El dragon ha muerto, fin del juego");
+            }
+            
+        }
+
+        function caballeroAtaca() {
+            console.log("El Caballero ataca");
+            dragon.hp -= caballero.atk - dragon.def;
+            console.log(dragon.nombre + "tiene" + dragon.hp + "de HP");
+            if (dragon.hp <= 0) {
+                dragon.hp = 0;
+                repartirExperiencia();
+                alert("El dragón ha muerto, fin del juego");
+            }
+            
+           
+        }
+
+        function dragonAtaca() {
+            console.log("El Dragón ataca");
+            guerrera.hp -= dragon.atk - guerrera.def;
+            caballero.hp -= dragon.atk - caballero.def;
+            console.log("La Guerrera tiene " + guerrera.hp + " de HP");
+            console.log("El Caballero tiene " + caballero.hp + " de HP");
+
+            if (guerrera.hp <= 0 || caballero.hp <= 0) {
+                alert("Has sido derrotado. Fin del juego");
+               
+            }
+        }
+        
+
+        function repartirExperiencia() {
+            console.log("El dragón ha sido derrotado");
+            var experienciaTotal = dragon.exp;
+            var experienciaPorPersonaje = experienciaTotal / 2;
+
+            guerrera.exper += experienciaPorPersonaje;
+            caballero.exper += experienciaPorPersonaje;
+
+            console.log("La Guerrera ha ganado" + experienciaPorPersonaje + "puntos de experiencia");
+            console.log("El caballero ha ganado" + experienciaPorPersonaje + "puntos de experiencia");
+        }
+        
+
+    </script>
+
+
+    <style>
+
+        /*aqui va css*/
+
+        #calabozo {
+            position:relative;
+            width:900px;
+            height:600px;
+            background-image:url('img/personajes/fondo (1).jpg');
+            background-size:cover;
+        }
+
+        .personaje {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        #guerrera {
+            left:300px;
+            top:200px;
+        }
+
+        #caballero {
+            right:300px;
+            top:200px;
+        }
+
+        #dragon {
+            left:400px;
+            bottom:100px;
+            transform:rotate(180deg);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="calabozo">
+        <img id="guerrera" class="personaje" src="img/personajes/A0VBHlW.png" onclick="guerreraAtaca()" />
+        <img id="caballero" class="personaje" src="img/personajes/4EzaTxj.png" onclick="caballeroAtaca()" />
+        <img id="dragon" class="personaje" src="img/personajes/GMGFDFS.png" onclick="dragonAtaca()"/>
+       
+    </div>
+
+</body>
+</html>
