@@ -35,7 +35,7 @@
             nombre:"Bellatrix",
             apellido: "Lestrange",
             casa: slytherin,
-            hechicoPreferido: ak 
+            hechizoPreferido: ak 
 
         }
 
@@ -50,8 +50,28 @@
 
         var juegos75 = {     
             numero: 75,
-            arena:"Bosque",
+            arena: "Bosque",
+
         }
+
+        var dist5 = {
+            numero: 5,
+            ocupacion: "Pesca",
+
+        }
+
+
+        var juegos11 = {
+            numero: 11,
+            arena: "Ruinas"
+        }
+
+
+        var juegos65 = {
+            numero: 65,
+            arena: "Playa",
+        }
+
 
         var katniss = {
             nombre: "Katniss",
@@ -68,11 +88,6 @@
 
         }
 
-        var dist5 = {
-            numero: 5,
-            ocupacion: "Pesca",
-
-        }
 
         var finnick = {
             nombre: "Finnick",
@@ -88,16 +103,7 @@
             juegosnumero: juegos11
         }
 
-        var juegos11 = {
-            numero: 11,
-            arena:"Ruinas"
-        }
-
-
-        var juegos65= {
-            numero: 65,
-            arena:"Playa",
-        }
+      
 
         var dist4 = {
             numero: 4,
@@ -132,7 +138,7 @@
 
         //de manera general. declaro una funcin que presente a un mago y lo muestra en la consola 
 
-        function presentarMago() {
+        function presentarMago(mago) {
             console.log(mago.nombre + "" + mago.apellido + "pertenece a la casa" + mago.casa.nombre + "cuyo emblema es la" + mago.casa.emblema + "y su hechizo preferido es" + mago.hechizoPreferido.conjuro);
 
         }
@@ -143,13 +149,14 @@
         presentarMago(bellatrix);
 
         //asignaciones por valor 
-        var peso = 50,
-        var weight = peso;
+
+        var peso = 50;
+        var weight = peso; 
 
 
         //funcion que presenta a mis personajes 
 
-        function presentarVencedor() {
+        function presentarVencedor(vencedor) {
             console.log(vencedor.nombre + "" + vencedor.apellido + "pertenece al distrito" + vencedor.distrito.numero + "y gano los juegos" + vencedor.juegosnumero.numero);
         }
 
@@ -170,8 +177,8 @@
 
         //funcion para los distritos
 
-       function  presentarDistrito() {
-            console.log("el " + distrito.dist12 + "se ocupa de" + distrito.ocupacion); 
+        function presentarDistrito(distrito) {
+            console.log("el " + distrito.numero + "se ocupa de" + distrito.ocupacion);
         }
 
         //invoco la funcion para los distritos
@@ -183,7 +190,7 @@
         //funcion para los juegos
 
         function presentarJuegos() {
-            console.log("Los juegos del hambre son un castigo para los distritos, entre ellos los distritos" + dist12.numero + dist4.numero + dist5.numero + "distritos que regresaron con uno o mas vencedores como" + peeta.nombre + katniss.nombre + finnick.nombre + max.nombre + )
+            console.log("Los juegos del hambre son un castigo para los distritos, entre ellos los distritos" + dist12.numero + dist4.numero + dist5.numero + "distritos que regresaron con uno o mas vencedores como" + peeta.nombre + katniss.nombre + finnick.nombre + max.nombre + joana.nombre);
         }
 
 
