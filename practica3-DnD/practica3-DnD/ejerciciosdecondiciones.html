@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ejercicios de condiciones</title>
+    <script>
+
+        var precio = 250;
+        var clienteFrecuente = true;
+        var esMonedaLocal = true;
+        console.log("precio base" + (esMonedaLocal ? "MXN" : "USD") + precio);
+        // este es un if en linea inlife-if 
+
+        if (precio > 100) {
+
+            if (clienteFrecuente) {
+                //este es un if anidado 
+                precio = precio * 0.5;
+                console.log("aplica descuento de 50% por cliente frecuente");
+            }
+            else {
+
+                //le aplico un descuento 
+                precio = precio * 0.75;
+                console.log("Aplica deescuento de 25%");
+            }
+           
+        }
+
+
+        else if (precio > 90) {
+            precio = precio * 0.85;
+            console.log("aplica descento de 15%");
+        }
+
+        else if (precio > 80) {
+            precio = precio * 0.9;
+            console.log("aplica descuento de 10%");
+        }
+
+        else {
+            console.log("no hay descuento");
+
+        }
+
+        
+
+        console.log("precio final: $" + (esMonedaLocal ? "MXN" : "USD") + precio);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
