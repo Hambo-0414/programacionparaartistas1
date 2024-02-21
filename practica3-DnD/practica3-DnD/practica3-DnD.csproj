@@ -67,7 +67,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ejercicios-zodiacis.html" />
     <Content Include="ejerciciosdecondiciones.html" />
+    <Content Include="img\horoscopo\acuario.jpg" />
+    <Content Include="img\horoscopo\aries.jpg" />
+    <Content Include="img\horoscopo\geminis.jpg" />
+    <Content Include="img\horoscopo\indefinido.jpg" />
+    <Content Include="img\horoscopo\leo.jpg" />
+    <Content Include="img\horoscopo\libra.jpg" />
+    <Content Include="img\horoscopo\piscis.jpg" />
+    <Content Include="img\horoscopo\tauro.jpg" />
     <Content Include="img\personajes\3DDKP17.png" />
     <Content Include="img\personajes\4EzaTxj.png" />
     <Content Include="img\personajes\8aGTvk9.png" />
