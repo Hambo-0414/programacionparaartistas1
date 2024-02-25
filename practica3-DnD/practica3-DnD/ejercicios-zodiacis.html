@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <link />
     <meta charset="utf-8" />
     <title>Ejercicio Zodiaco</title>
     <script>
@@ -9,12 +10,12 @@
             var dia = parseInt(selectorDiaNac.value);
             var mes = parseInt(selectorMesNac.value);
 
-            var valor = mes * 100 + dia; 
+            var valor = mes * 100 + dia;
 
 
             console.log("Consultando fecha" + dia + "/" + mes);
 
-      
+
             if (120 <= valor && valor < 218) {
                 icono.src = "img/horoscopo/acuario.jpg";
                 nombreSigno.innerHTML = "Acuario";
@@ -101,306 +102,309 @@
                 descripSigno.innerHTML = "Son muy, muy testarudos y pocas veces reconocen su error. Su sentido de la responsabilidad asciende a niveles extremos";
 
             }
-
-            
         }
 
-        function consultarCompatibilidad() {
-            var signoA= selectorSignoAvalue;
-            var signoB= selectorSignoBvalue; 
+    </script>
 
-            if (signoA=== "Acuario") {
+    <script>
 
-                if (signoB=== "Acuario") {
+        function consultarCompa(signoA, signoB) {
+            var signoA = parseInt(selectorSignoA.value);
+            var signoB = parseInt(selectorsignoB.value);
+
+
+            if (signoA === "Acuario") {
+
+                if (signoB === "Acuario") {
                     compa.innerHTML = "Compatibilidad media";
                     descripCompa.innerHTML = "Cuando forman una relación sentimental, el resultado será la atracción y los placeres compartidos, además de una comunicación sumamente fluida";
                 }
 
-               else if (signoB=== "Piscis") {
+                else if (signoB === "Piscis") {
                     compa.innerHTML = "compatibilidad baja";
                     descripCompa.innerHTML = "Es una relación con un grado de compatibilidad no muy alto, principalmente porque son dos almas muy distintas. Piscis necesita que su pareja se entregue al mil por mil y Acuario quiere todo lo contrario";
                 }
-                else if (signoB=== "Aries") {
+                else if (signoB === "Aries") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "Ambos son optimistas, humanitarios, independientes, valientes y entusiastas. Intuyen que juntos pueden formar un gran equipo y hacer grandes cosas";
 
                 }
-                else if (signoB=== "Tauro") {
+                else if (signoB === "Tauro") {
                     compa.innerHTML = "compatibilidad baja";
                     descripCompa.innerHTML = "Se trata de una combinación algo compleja pues la naturaleza algo cambiante y llena de reformas de Acuario choca con el sentimiento estático de la vida de Tauro";
                 }
-                else if (signoB=== "Géminis") {
+                else if (signoB === "Géminis") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "Tienen en común que ambos se sienten atraidos por el intelecto de las demás personas y en esto no encontrarán mejor propuesta que ellos mismos. Tamién coinciden en el ámbito de demostrar afecto, especialmente en público";
 
                 }
-                else if (signoB=== "Cáncer") {
+                else if (signoB === "Cáncer") {
                     compa.innerHTML = "Compatibilidad baja";
                     descripCompa.innerHTML = "La vida en pareja puede resultar complicada para estos dos signos, ya que el carácter familiar, entregado y proptectos de Cáncer acabará por agobiar a Acuario";
                 }
-                else if (signoB=== "Leo") {
+                else if (signoB === "Leo") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "Cuando de junten verán que tienen varios proyectos en común, por lo que se propordrán los mismos objetivos, juntando sus intereses, y de la mano alcanzarán todas sus metas";
                 }
-                else if (signoB=== "Virgo") {
+                else if (signoB === "Virgo") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "La mayor ventaja de ambos es que se adaptan con facilidad a todas las situaciones y esto les facilita mucho la vida. Encontrarán apoyo constante el uno en el otro y sobre él forjarán su amistad";
                 }
-                else if (signoB=== "Libra") {
+                else if (signoB === "Libra") {
                     compa.innerHTML = "Compatibilidad excelente";
                     descripCompa.innerHTML = "Ambos pertenecen al elemento agua y esto favorece su buena comunicación, aparte de las numerosas afinidades que tienen por este motivo";
                 }
-                else if (signoB=== "Escorpio") {
+                else if (signoB === "Escorpio") {
                     compa.innerHTML = "Compatibilidad muy baja";
                     descripCompa.innerHTML = "Estos dos signos tiene personalidades muy distintas y enfocan la vida y las relaciones de maneras muy diferentes";
                 }
-                else if (signoB=== "Sagitario") {
+                else if (signoB === "Sagitario") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "Se trata de dos signos qur tienen todas las papeletas para llegar a un entendimiento perfecto de libertad y tolerancia en su relación";
                 }
-                else if (signoB=== "Capricornio") {
+                else if (signoB === "Capricornio") {
                     compa.innerHTML = "Compatibilidad baja";
                     descripCompa.innerHTML = "Tendencia por parte de ambos signos de participar e involucrarse en multitud de actividades, lo cual les puede distanciar";
                 }
-               
-            }
-            if (signoA=== "Piscis") {
 
-                if (signoB=== "Acuario") {
+            }
+            if (signoA === "Piscis") {
+
+                if (signoB === "Acuario") {
                     compa.innerHTML = "Compatibilidad baja";
                     descripCompa.innerHTML = "Son dos personas muy distintas, pero ambas tienen una visión muy alta de la especie humana y desean cambiar el mundo, aunque Piscis es un utópico por naturaleza y Acuario desea la revolución para que ese cambio ocurra";
                 }
-                else if (signoB=== "Piscis") {
+                else if (signoB === "Piscis") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "La comunicación fluirá espontáneamente entre ambos, con gran facilidad y a medida que se vayan conociendo, se convertirá casi en telepatía";
                 }
 
-                else if (signoB=== "Aries") {
+                else if (signoB === "Aries") {
                     compa.innerHTML = "Compatibilidad media";
                     descripCompa.innerHTML = "Se sentirán atraidos en un primer momento, ya que tienen actitudes diferentes. Pese a estas actitudes tan opuestas, al final, ambos se respetan e intentan construir algo sano";
                 }
-                else if (signoB=== "Tauro") {
+                else if (signoB === "Tauro") {
                     compa.innerHTML = "Compatibilidad media";
                     descripCompa.innerHTML = "Hacen una buena pareja y se comprenderán bien, sobre todo, por su fuerte sentido de la amistad. Ambos son sensibles y creativos e , incluso, las diferencias propias del carácter que tengan facilmente se compensarán";
 
                 }
-                else if (signoB=== "Géminis") {
+                else if (signoB === "Géminis") {
                     compa.innerHTML = "Compatibilidad media";
                     descripCompa.innerHTML = "La relación entre ambos estará plagada de altibajos, aunque si las rencillas son cosntantes, también lo serán las reconciliaciones y estas últimas. además, serán memorables";
                 }
-                else if (signoB=== "Cáncer") {
+                else if (signoB === "Cáncer") {
                     compa.innerHTML = "Compatibilidad excelente";
                     descripCompa.innerHTML = "La compatibilidad es una fusión de sensibilidad y compasión. Ambos signos se entienden y apoyan en eun nivel emocional profundo";
                 }
-                else if (signoB=== "Leo") {
+                else if (signoB === "Leo") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "Ambos signos comparten diferentes inquietudes intelectuales, y juntos, podrán satisfacerlas completamente, cada uno es el reactivo adecuado para potenciar las capacidades del otro";
                 }
-                else if (signoB=== "Virgo") {
+                else if (signoB === "Virgo") {
                     compa.innerHTML = "Compatibilidad muy alta";
                     descripCompa.innerHTML = "El racional y materialista Virgo, se complementa idóneamente con el intuitivo y emocional Piscis";
                 }
-                else if (signoB=== "Libra") {
+                else if (signoB === "Libra") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "No tendrá relaciones faciles, pero si llegan a funcionar, será algo muy especial y gratificante";
                 }
-                else if (signoB=== "Escorpio") {
+                else if (signoB === "Escorpio") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "Ambos signos son especialmente intensos, por lo que entienden la necesidad del otro de unirse y lograr un sentido más profundo en la intimidad y desde el principio de la relación";
                 }
-                else if (signoB=== "Sagitario") {
+                else if (signoB === "Sagitario") {
                     compa.innerHTML = "Compatibilidad media";
                     descripCompa.innerHTML = "Ambos son impulsivos y dinámicos y tampoco les faltan las ganas de vivir intensamente, por lo que en su vida en común, salvo algún altibajo, puede resultar emocionante";
                 }
-                else if (signoB=== "Capricornio") {
+                else if (signoB === "Capricornio") {
                     compa.innerHTML = "Compatibilidad excelente";
                     descripCompa.innerHTML = "Parecen hecho el uno para el otro en todos los sentidos";
                 }
 
             }
 
-            if (signoA=== "Aries") {
+            if (signoA === "Aries") {
 
-                if (signoB=== "Acuario") {
+                if (signoB === "Acuario") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "A ninguno le importará arriesgar porque en su naturaleza no está la de tener miedos ni tabúes que los limiten o encorseten";
                 }
-                else if (signoB=== "Piscis") {
+                else if (signoB === "Piscis") {
                     compa.innerHTML = "Compatibilidad media";
                     descripCompa.innerHTML = "Ambos se respetan e intentan construir algo sano. Cuando se ponen como meta estar juntos y tienen el mismo objetivo, pueden llegar a lograr un buena relación";
                 }
-                else if (signoB=== "Aries") {
+                else if (signoB === "Aries") {
                     compa.innerHTML = "Compatibilidad media";
                     descripCompa.innerHTML = "Suelen ser personas qu odian la falsedad y cualquier otra clase de artimañas: juntas pueden conseguir ser muy felices, siempre y cuando no intenten someterse mutuamente";
                 }
 
-                else if (signoB=== "Tauro") {
+                else if (signoB === "Tauro") {
                     compa.innerHTML = "Compatibilidad media";
                     descripCompa.innerHTML = "La relación sentimental entre estos dos signos tendrpa que superar algunos obstáculos, pero ante cualquier dificultad ambos pondrán todos su empeño en salir adelante";
                 }
-                else if (signoB==="Géminis") {
+                else if (signoB === "Géminis") {
                     compa.innerHTML = "compatibilidad excelente";
                     descripCompa.innerHTML = "Es una alianza llena de ingenio y complicidad. Los dos se sienten muy a gusto nada más conocerse y al segundo se hacen amigos inseparables";
                 }
-                else if (signoB=== "Cáncer") {
+                else if (signoB === "Cáncer") {
                     compa.innerHTML = "Compatibilidad baja";
                     descripCompa.innerHTML = "Los dos quieren mandar y tener la rázón, sino se enfadan";
                 }
-                else if (signoB=== "Leo") {
+                else if (signoB === "Leo") {
                     compa.innerHTML = "Compatibilidad elevada";
                     descripCompa.innerHTML = "Cuando estos dos construyen una relación a largo plazo es fácil que concenten en todos los sentidos, tanto física como emocionalmente";
                 }
-                else if (signoB=== "Virgo") {
+                else if (signoB === "Virgo") {
                     compa.innerHTML = "Compatibilidad baja";
                     descripCompa.innerHTML = "Normalmente tiene discusiones y peleas por casi todo, ya sea por dinero, por celos o por cualquier acontecimiento";
                 }
-                else if (signoB=== "Libra") {
+                else if (signoB === "Libra") {
                     compa.innerHTML = "Compatibilidad buena";
                     descripCompa.innerHTML = "En la práctica y cuando la relación se estabiliza, la convivencia puede poner a prueba sus nervios. Sin embargo, les resultará difícil no rendirse a la seductora tracción que les une";
                 }
-                else if (signoB==="Escorpio") {
+                else if (signoB === "Escorpio") {
                     compa.innerHTML = "Compatibilidad buena";
                     descripCompa.innerHTML = "Los dos signoa se complementan y consiguen ayudarse en todo lo que puedan, se escuchan y les encanta vivir aventuras juntos";
                 }
-                else if (signoB=== "Sagitario") {
+                else if (signoB === "Sagitario") {
                     compa.innerHTML = "Compatibilidad elevada";
                     descripCompa.innerHTML = "Su relación es bastante buena en cualquiera de los terrenos en que se relacionen";
                 }
-                else if (signoB=== "Capricornio") {
+                else if (signoB === "Capricornio") {
                     compa.innerHTML = "Compatibilidad baja";
                     descripCompa.innerHTML = "Tiene carácteres diferentes y una forma de ver la vida completamente diferente";
                 }
-                      
+
             }
 
-            if (signoA=== "Tauro") {
+            if (signoA === "Tauro") {
 
-                if (signoB=== "Acuario") {
+                if (signoB === "Acuario") {
                     compa.innerHTML = "Compatibilidad baja";
                     descripCompa.innerHTML = "Se trata de una combinación algo compleja pues la naturaleza algo cambiante y llena de reformas de Acuario choca con el sentimiento estático de la vida de Tauro";
                 }
-                else if (signoB=== "Piscis") {
+                else if (signoB === "Piscis") {
                     compa.innerHTML = "Compatibilidad media";
                     descripCompa.innerHTML = "Hacen una buena pareja y se comprenderán bien, sobre todo, por su fuerte sentido de la amistad. Ambos son sensibles y creativos e , incluso, las diferencias propias del carácter que tengan facilmente se compensarán";
 
                 }
-                else if (signoB=== "Aries") {
+                else if (signoB === "Aries") {
                     compa.innerHTML = "Compatibilidad media";
                     descripCompa.innerHTML = "La relación sentimental entre estos dos signos tendrpa que superar algunos obstáculos, pero ante cualquier dificultad ambos pondrán todos su empeño en salir adelante";
                 }
-                else if (signoB=== "Tauro") {
+                else if (signoB === "Tauro") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "Son muy compatibles ya que los dos son muy prácticos y consiguen forjar una relación con una base muy sólida";
                 }
 
-                else if (signoB=== "Géminis") {
+                else if (signoB === "Géminis") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "En general, sus relaciones son beneficiosas en la maypría de los casos, ya que, aunque son personas diferentes, suelen coincidir en sus planteamientos vitales";
                 }
-                else if (signoB=== "Cáncer") {
+                else if (signoB === "Cáncer") {
                     compa.innerHTML = "Compatibilidad buena";
                     descripCompa.innerHTML = "Ambos encajan muy bien y se pueden llegar a convertir en almas gemelas. Los dos signos con muy cariñosos y les gusta demostrar su amor";
                 }
-                else if (signoB=== "Leo") {
+                else if (signoB === "Leo") {
                     compa.innerHTML = "Compatibilidad media";
                     descripCompa.innerHTML = "Se atren y son la pareja ideal para un romance sin mayores compromisos";
 
                 }
-                else if (signoB=== "Virgo") {
+                else if (signoB === "Virgo") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "Ambos son prácticos, y si se juntan, podrpán disfrutar de una relación establedurante muchos años, ya qued ambos se admiran el uno al otro";
                 }
-                else if (signoB=== "Libra") {
+                else if (signoB === "Libra") {
                     compa.innerHTML = "Compatibilidad media";
                     descripCompa.innerHTML = "Se sienten atraidos el uno por el otro desde el principio, pero el carácter de Libra choca con el inalterable espíritu de Leo";
                 }
-                else if (signoB=== "Escorpio") {
+                else if (signoB === "Escorpio") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "Ambos son signos muy luchadores que no se rinden hasta que no consiguen sus objetivos. Si se juntan, lograrán todo lo que se propongan, y eso es algo que motiva a los dos";
                 }
-                else if (signoB=== "Sagitario") {
+                else if (signoB === "Sagitario") {
                     compa.innerHTML = "Compatibilidad baja";
                     descripCompa.innerHTML = "Se trata de una relación complicada y dificil de mantener, pues Tauro busca la tranquilidad y el confort, mientras que Sagitario no estará dispuesto a renunciar a la adrenalina";
                 }
-                else if (signoB=== "Capricornio") {
+                else if (signoB === "Capricornio") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "Los dos signos tiene formas parecidas de ver la vida, y conseguirán complementarse en todos los ámbitos";
                 }
-                
+
             }
 
-            if (signoA=== "Géminis") {
-                if (signoB=== "Acuario") {
+            if (signoA === "Géminis") {
+                if (signoB === "Acuario") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "Tienen en común que ambos se sienten atraidos por el intelecto de las demás personas y en esto no encontrarán mejor propuesta que ellos mismos. Tamién coinciden en el ámbito de demostrar afecto, especialmente en público";
                 }
-                else if (signoB=== "Piscis") {
+                else if (signoB === "Piscis") {
                     compa.innerHTML = "Compatibilidad media";
                     descripCompa.innerHTML = "La relación entre ambos estará plagada de altibajos, aunque si las rencillas son cosntantes, también lo serán las reconciliaciones y estas últimas. además, serán memorables";
                 }
-                else if (signoB=== "Aries") {
+                else if (signoB === "Aries") {
                     compa.innerHTML = "compatibilidad excelente";
                     descripCompa.innerHTML = "Es una alianza llena de ingenio y complicidad. Los dos se sienten muy a gusto nada más conocerse y al segundo se hacen amigos inseparables";
                 }
-                else if (signoB=== "Tauro") {
+                else if (signoB === "Tauro") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "En general, sus relaciones son beneficiosas en la maypría de los casos, ya que, aunque son personas diferentes, suelen coincidir en sus planteamientos vitales";
                 }
-                else if (signoB=== "Géminis") {
+                else if (signoB === "Géminis") {
                     compa.innerHTML = "Compatibilidad media";
                     descripCompa.innerHTML = "Ambos son muy innovadores y generarán nuevas ideas y proyectos en la relación que ayudarán positivamente";
 
                 }
-                else if (signoB=== "Cáncer") {
+                else if (signoB === "Cáncer") {
                     compa.innerHTML = "Compatibilidad muy baja";
                     descripCompa.innerHTML = "Ambos son bastante diferentes y no se entenderán en muchos aspectos de la vida";
                 }
-                else if (signoB=== "Leo") {
+                else if (signoB === "Leo") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "A los dos le gusta divertirse, vivir aventuras y disfrutar juntos. Además, cuentan con un buena comunicación";
                 }
-                else if (signoB=== "Virgo") {
+                else if (signoB === "Virgo") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "Cuando estos dos signose se juntan se demuestran su amor y conseguirán que su relación dure mucho tiempo gracias a la lealtad y a la confianza que se transmite uno al otro";
                 }
-                else if (signoB=== "Libra") {
+                else if (signoB === "Libra") {
                     compa.innerHTML = "Compatibilidad excelente";
                     descripCompa.innerHTML = "Son personas de carácteristicas heterógeneas, pero sus relaciones suelen estar envueltas dentro de un equilibrio enriquecedor para ambos";
                 }
-                else if (signoB=== "Escorpio") {
+                else if (signoB === "Escorpio") {
                     compa.innerHTML = "Compatibilidad baja";
                     descripCompa.innerHTML = "En caso de que ambos pongan de sub parte y respeten sus diferencias, podrán tener una relación estable, pero tendrpán que ser bastante tolerantes";
                 }
-                else if (signoB=== "Sagitario") {
+                else if (signoB === "Sagitario") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "Son sociables, divertidos y seductores, se atraerán de inmediato mutuamente";
                 }
-                else if (signoB=== "Capricornio") {
+                else if (signoB === "Capricornio") {
                     compa.innerHTML = "Compatibilidad baja";
                     descripCompa.innerHTML = "Los dos signos ven la vida con diferentes ojos y tienen diferencias a la hora de enfocar las situaciones";
                 }
 
             }
 
-            if (signoA=== "Çáncer") {
+            if (signoA === "Çáncer") {
 
-                if (signoB=== "Acuario") {
+                if (signoB === "Acuario") {
                     compa.innerHTML = "Compatibilidad baja";
                     descripCompa.innerHTML = "La vida en pareja puede resultar complicada para estos dos signos, ya que el carácter familiar, entregado y proptectos de Cáncer acabará por agobiar a Acuario";
                 }
-                else if (signoB=== "Piscis") {
+                else if (signoB === "Piscis") {
                     compa.innerHTML = "Compatibilidad excelente";
                     descripCompa.innerHTML = "La compatibilidad es una fusión de sensibilidad y compasión. Ambos signos se entienden y apoyan en eun nivel emocional profundo";
                 }
-                else if (signoB=== "Aries") {
+                else if (signoB === "Aries") {
                     compa.innerHTML = "Compatibilidad baja";
                     descripCompa.innerHTML = "Los dos quieren mandar y tener la rázón, sino se enfadan";
                 }
-                else if (signoB=== "Tauro") {
+                else if (signoB === "Tauro") {
                     compa.innerHTML = "Compatibilidad buena";
                     descripCompa.innerHTML = "Ambos encajan muy bien y se pueden llegar a convertir en almas gemelas. Los dos signos con muy cariñosos y les gusta demostrar su amor";
                 }
-                else if (signoB=== "Géminis") {
+                else if (signoB === "Géminis") {
                     compa.innerHTML = "Compatibilidad muy baja";
                     descripCompa.innerHTML = "Ambos son bastante diferentes y no se entenderán en muchos aspectos de la vida";
                 }
@@ -409,31 +413,31 @@
                     descripCompa.innerHTML = "Suele resultar favorable, puesto que como son muy semejantes, sienten caso igual; los malentendidos no suelen darse en su relación";
                 }
 
-                else if (signoB=== "Leo") {
+                else if (signoB === "Leo") {
                     compa.innerHTML = "Compatibilidad baja";
                     descripCompa.innerHTML = "Generalmente, las relaciones que se establezcan entre los dos no serán demasiado afables, tendrán que poner mucho de su parte para lograr cierto entendimiento mutuo";
                 }
-                else if (signoB=== "Virgo") {
+                else if (signoB === "Virgo") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "Ambos son bastante parecidos. Una relación entre ellos es muy fructífera";
                 }
-                else if (signoB=== "Libra") {
+                else if (signoB === "Libra") {
                     compa.innerHTML = "Compatibilidad media";
                     descripCompa.innerHTML = "Las diefrencias que mantienen, aunque no son profundas, se notan en unos ámbitos más que otros, aunque siempre cabe la posibilidad de llegar a un equilibrio satisfactorio y mutuo";
                 }
-                else if (signoB=== "Escorpio") {
+                else if (signoB === "Escorpio") {
                     compa.innerHTML = "Compatibilidad media";
                     descripCompa.innerHTML = "Su unión resulta positiva, pues sienten una fuerte atracción que los impula a mantenerse cerca, aunque sea circunstancialmente";
                 }
-                else if (signoB=== "Sagitario") {
+                else if (signoB === "Sagitario") {
                     compa.innerHTML = "Compatibilidad baja";
                     descripCompa.innerHTML = "Es una convivencia muy movida y llena de altibajos, sobretodo porque no comparten a la par los quehaceres de la vida";
                 }
-                else if (signoB=== "Capricornio") {
+                else if (signoB === "Capricornio") {
                     compa.innerHTML = "Compatibilidad alta";
                     descripCompa.innerHTML = "Ambos aman las uniones tradicionales, en cualquier ámbito que se produzcan";
                 }
-                
+
             }
 
             if (signoA === "Leo") {
@@ -486,7 +490,7 @@
                     compa.innerHTML = "Compatibilidad baja";
                     descripCompa.innerHTML = "Tendrán que hacer un sacrificio importrante para que esta relación sea lo mpás duradera posible";
                 }
-               
+
             }
             if (signoA === "Virgo") {
 
@@ -589,9 +593,9 @@
                 }
                 else if (signoB === "Capricornio") {
                     compa.innerHTML = "Compatibilidad baja";
-                    descripCompa.innerHTML = "Generalmente su compatibilidad es un poco compleja, aunque si se disponen a cder un poco, pueden conseguir un equilibrio muy beneficioso para las dos partes";
+                    descripCompa.innerHTML = "Generalmente su compatibilidad es un poco compleja, aunque si se disponen a ceder un poco, pueden conseguir un equilibrio muy beneficioso para las dos partes";
                 }
-                
+
             }
 
             if (signoA === "Escorpio") {
@@ -649,31 +653,142 @@
             if (signoA === "Sagitario") {
 
                 if (signoB === "Acuario") {
-
+                    compa.innerHTML = "Compatibilidad alta";
+                    descripCompa.innerHTML = "Se trata de dos signos qur tienen todas las papeletas para llegar a un entendimiento perfecto de libertad y tolerancia en su relación";
+                }
+                else if (signoB === "Piscis") {
+                    compa.innerHTML = "Compatibilidad media";
+                    descripCompa.innerHTML = "Ambos son impulsivos y dinámicos y tampoco les faltan las ganas de vivir intensamente, por lo que en su vida en común, salvo algún altibajo, puede resultar emocionante";
+                }
+                else if (signoB === "Aries") {
+                    compa.innerHTML = "Compatibilidad elevada";
+                    descripCompa.innerHTML = "Su relación es bastante buena en cualquiera de los terrenos en que se relacionen";
+                }
+                else if (signoB === "Tauro") {
+                    compa.innerHTML = "Compatibilidad baja";
+                    descripCompa.innerHTML = "Se trata de una relación complicada y dificil de mantener, pues Tauro busca la tranquilidad y el confort, mientras que Sagitario no estará dispuesto a renunciar a la adrenalina";
+                }
+                else if (signoB === "Géminis") {
+                    compa.innerHTML = "Compatibilidad alta";
+                    descripCompa.innerHTML = "Son sociables, divertidos y seductores, se atraerán de inmediato mutuamente";
+                }
+                else if (signoB === "Cáncer") {
+                    compa.innerHTML = "Compatibilidad baja";
+                    descripCompa.innerHTML = "Es una convivencia muy movida y llena de altibajos, sobretodo porque no comparten a la par los quehaceres de la vida";
+                }
+                else if (signoB === "Leo") {
+                    compa.innerHTML = "Compatibilidad alta";
+                    descripCompa.innerHTML = "Pueden pasarlo muy bien juntos y llegar a ser perfectamente compatibles, siempre que ambos sepan el modo de ceder el porotagonismo según le corresponda a cada uno";
+                }
+                else if (signoB === "Virgo") {
+                    compa.innerHTML = "Compatibilidad media";
+                    descripCompa.innerHTML = "Exiete entre ellos un punto que puede conseguir unirlos y es la facilidad de ambos por la comunicación";
+                }
+                else if (signoB === "Libra") {
+                    compa.innerHTML = "Compatibilidad media";
+                    descripCompa.innerHTML = "Se apoyarán mutuamente y jun tos serán capaces de afrontar todo tipo de contratiempos";
+                }
+                else if (signoB === "Escorpio") {
+                    compa.innerHTML = "Compatibilidad media";
+                    descripCompa.innerHTML = "Tienen buenos aspectos a priori: aunque tendrán que tener mucho cuidado, sobretodo Sagitario, para no herir a su pareja con sus palabras";
+                }
+                else if (signoB === "Sagitario") {
+                    compa.innerHTML = "Compatibilidad elevada";
+                    descripCompa.innerHTML = "Congenian en la mayor parte de loc casos; además, si no fuera así, sería como negarse a sí mismas, pues son dos personas muy, muy afines";
+                }
+                else if (signoB === "Capricornio") {
+                    compa.innerHTML = "Compatibilidad alta";
+                    descripCompa.innerHTML = "Cuando forman una pareja tienen algunos problemas, pero es innegable la atracción que tienen por el otro";
                 }
             }
-                
-                
-                
-                
-                
-                
-                
-                
-    </script>
+
+            if (signoA === "Capricornio") {
+
+                if (signoB === "Acuario") {
+                    compa.innerHTML = "Compatibilidad baja";
+                    descripCompa.innerHTML = "Tendencia por parte de ambos signos de participar e involucrarse en multitud de actividades, lo cual les puede distanciar";
+                }
+                else if (signoB === "Piscis") {
+                    compa.innerHTML = "Compatibilidad excelente";
+                    descripCompa.innerHTML = "Parecen hecho el uno para el otro en todos los sentidos";
+                }
+                else if (signoB === "Aries") {
+                    compa.innerHTML = "Compatibilidad baja";
+                    descripCompa.innerHTML = "Tiene carácteres diferentes y una forma de ver la vida completamente diferente";
+                }
+                else if (signoB === "Tauro") {
+                    compa.innerHTML = "Compatibilidad alta";
+                    descripCompa.innerHTML = "Los dos signos tiene formas parecidas de ver la vida, y conseguirán complementarse en todos los ámbitos";
+                }
+                else if (signoB === "Géminis") {
+                    compa.innerHTML = "Compatibilidad baja";
+                    descripCompa.innerHTML = "Los dos signos ven la vida con diferentes ojos y tienen diferencias a la hora de enfocar las situaciones";
+                }
+                else if (signoB === "Cáncer") {
+                    compa.innerHTML = "Compatibilidad alta";
+                    descripCompa.innerHTML = "Ambos aman las uniones tradicionales, en cualquier ámbito que se produzcan";
+                }
+                else if (signoB === "Leo") {
+                    compa.innerHTML = "Compatibilidad baja";
+                    descripCompa.innerHTML = "Tendrán que hacer un sacrificio importrante para que esta relación sea lo más duradera posible";
+                }
+                else if (signoB === "Virgo") {
+                    compa.innerHTML = "Compatibilidad excelente";
+                    descripCompa.innerHTML = "Ambos signos se complementan muy bien y de forma inmediata y son de las mejores combinaciones que pueden darse";
+                }
+                else if (signoB === "Libra") {
+                    compa.innerHTML = "Compatibilidad baja";
+                    descripCompa.innerHTML = "Generalmente su compatibilidad es un poco compleja, aunque si se disponen a ceder un poco, pueden conseguir un equilibrio muy beneficioso";
+                }
+                else if (signoB === "Escorpio") {
+                    compa.innerHTML = "Compatibilidad alta";
+                    descripCompa.innerHTML = "Relación marcada por un cariño sin límites y también por la fidelidad";
+                }
+                else if (signoB === "Sagitario") {
+                    compa.innerHTML = "Compatibilidad alta";
+                    descripCompa.innerHTML = "Cuando forman una pareja tienen algunos problemas, pero es innegable la atracción que tienen por el otro";
+                }
+                else if (signoB === "Capricornio") {
+                    compa.innerHTML = "Compatibilidad media";
+                    descripCompa.innerHTML = "Ambos deben confiar en el destino, relajarse un poco con el dinero y tirar hacia delante sin miedo al futuro";
+                }
+            }
+
+
+    </script>    
 
     <style>
 
         /*aqui va CSS*/
 
+        #icono {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
 
+        #nombreSigno {
+            color: #AC7D88;
+            margin-top: 35px;
+        }
 
+        #descripSigno {
+            color: #85586F;
+            margin-top: 35px;
+        }
 
+        #bodyContainer {
+            background-color: #FDF0D1;
+        }
 
+        #signoA {
+            color: #D7C0AE;
+            margin-top: 35px;
+        }
 
-
-
-
+        #signoB {
+            color: #967E76;
+        }
     </style>
 </head>
 <body>
@@ -738,13 +853,52 @@
 
     </select>
 
-    <button onclick="consultarHor()">
-        Consultar horòscopo
-    </button>
-    <button onclick="consultarCompatibilidad()">Consultar compatibilidad</button>
+    <label>SignoA</label>
+    <select id="signoA">
 
-    <img id="icono" src="img/horoscopo/indefinido.jpg"/>
+        <option value="1">Acuario</option>
+        <option value="2">Piscis</option>
+        <option value="3">Aries</option>
+        <option value="4">Tauro</option>
+        <option value="5">Géminis</option>
+        <option value="6">Cáncer</option>
+        <option value="7">Leo</option>
+        <option value="8">Virgo</option>
+        <option value="9">Libra</option>
+        <option value="10">Escorpio</option>
+        <option value="11">Sagitario</option>
+        <option value="12">Capricornio</option>
+
+    </select>
+
+    <label>signoB</label>
+    <select id="signoB">
+
+
+        <option value="1">Acuario</option>
+        <option value="2">Piscis</option>
+        <option value="3">Aries</option>
+        <option value="4">Tauro</option>
+        <option value="5">Géminis</option>
+        <option value="6">Cáncer</option>
+        <option value="7">Leo</option>
+        <option value="8">Virgo</option>
+        <option value="9">Libra</option>
+        <option value="10">Escorpio</option>
+        <option value="11">Sagitario</option>
+        <option value="12">Capricornio</option>
+
+    </select>
+
+    <button onclick="consultarHor()">Consultar horòscopo</button>
+
+    <img id="icono" src="img/horoscopo/indefinido.jpg" />
     <h2 id="nombreSigno"></h2>
     <p id="descripSigno"></p>
+
+    <button onclick="consultarCompa()">Consultar compatibilidad</button>
+    <h1 id="signoA"></h1>
+    <p id="signoB" ></p>
+
 </body>
 </html>
