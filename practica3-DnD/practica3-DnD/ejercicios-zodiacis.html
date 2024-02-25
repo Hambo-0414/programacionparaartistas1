@@ -103,14 +103,15 @@
 
             }
         }
+    
 
     </script>
 
     <script>
 
-        function consultarCompa(signoA, signoB) {
-            var signoA = parseInt(selectorSignoA.value);
-            var signoB = parseInt(selectorsignoB.value);
+        function consultarCompa() {
+            var signoA = selectorSignoA.value;
+            var signoB = selectorSignoB.value;
 
 
             if (signoA === "Acuario") {
@@ -754,6 +755,7 @@
                 }
             }
 
+        } 
 
     </script>    
 
@@ -761,34 +763,64 @@
 
         /*aqui va CSS*/
 
-        #icono {
-            position: relative;
-            width: 300px;
-            height: 300px;
-        }
+       body {
+           background-image:url(img/horoscopo/fondohoros.jpg); 
+       }
 
-        #nombreSigno {
-            color: #AC7D88;
-            margin-top: 35px;
-        }
+       #icono {
+           position:relative;
+           height:400px;
+           width:500px; 
+           left:400px;
+           top:30px;
+       }
 
-        #descripSigno {
-            color: #85586F;
-            margin-top: 35px;
-        }
+       h1 {
+           color:white;
+           background-color:gray;
+           font-family:'Times New Roman';
+          text-align:center;
+       }
 
-        #bodyContainer {
-            background-color: #FDF0D1;
-        }
+       label {
+           color:white;
+           background-color:gray;
+           font-family:'Times New Roman';
+       }
+       button {
+           font-family:Verdana; 
+           text-align:center;
+       }
+       select {
+           width:80px;
+           height:30px;
+       }
 
-        #signoA {
-            color: #D7C0AE;
-            margin-top: 35px;
-        }
+       .nombreSigno {
+           color:white;
+           background-color:white;
+           text-align:center;
+       }
 
-        #signoB {
-            color: #967E76;
-        }
+       .descripSigno {
+           color:white;
+           background-color:gray;
+           text-align:center;
+       }
+
+       .descripCompa {
+           color:white;
+           background-color:gray;
+           text-align:center;
+
+       }
+
+       .compa {
+           color:white;
+           background-color:gray;
+           text-align:center;
+       }
+
     </style>
 </head>
 <body>
@@ -854,39 +886,39 @@
     </select>
 
     <label>SignoA</label>
-    <select id="signoA">
+    <select id="selectorSignoA">
 
-        <option value="1">Acuario</option>
-        <option value="2">Piscis</option>
-        <option value="3">Aries</option>
-        <option value="4">Tauro</option>
-        <option value="5">Géminis</option>
-        <option value="6">Cáncer</option>
-        <option value="7">Leo</option>
-        <option value="8">Virgo</option>
-        <option value="9">Libra</option>
-        <option value="10">Escorpio</option>
-        <option value="11">Sagitario</option>
-        <option value="12">Capricornio</option>
+        <option value="Acuario">Acuario</option>
+        <option value="Piscis">Piscis</option>
+        <option value="Aries">Aries</option>
+        <option value="Tauro">Tauro</option>
+        <option value="Géminis">Géminis</option>
+        <option value="Cáncer">Cáncer</option>
+        <option value="Leo">Leo</option>
+        <option value="Virgo">Virgo</option>
+        <option value="Libra">Libra</option>
+        <option value="Escorpio">Escorpio</option>
+        <option value="Sagitario">Sagitario</option>
+        <option value="Capricornio">Capricornio</option>
 
     </select>
 
-    <label>signoB</label>
-    <select id="signoB">
+    <label>SignoB</label>
+    <select id="selectorSignoB">
 
 
-        <option value="1">Acuario</option>
-        <option value="2">Piscis</option>
-        <option value="3">Aries</option>
-        <option value="4">Tauro</option>
-        <option value="5">Géminis</option>
-        <option value="6">Cáncer</option>
-        <option value="7">Leo</option>
-        <option value="8">Virgo</option>
-        <option value="9">Libra</option>
-        <option value="10">Escorpio</option>
-        <option value="11">Sagitario</option>
-        <option value="12">Capricornio</option>
+        <option value="Acuario">Acuario</option>
+        <option value="Piscis">Piscis</option>
+        <option value="Aries">Aries</option>
+        <option value="Tauro">Tauro</option>
+        <option value="Géminis">Géminis</option>
+        <option value="Cáncer">Cáncer</option>
+        <option value="Leo">Leo</option>
+        <option value="Virgo">Virgo</option>
+        <option value="Libra">Libra</option>
+        <option value="Escorpio">Escorpio</option>
+        <option value="Sagitario">Sagitario</option>
+        <option value="Capricornio">Capricornio</option>
 
     </select>
 
@@ -897,8 +929,8 @@
     <p id="descripSigno"></p>
 
     <button onclick="consultarCompa()">Consultar compatibilidad</button>
-    <h1 id="signoA"></h1>
-    <p id="signoB" ></p>
+    <h1 id="compa"></h1>
+    <p id="descripCompa" ></p>
 
 </body>
 </html>

@@ -74,6 +74,7 @@
     <Content Include="img\horoscopo\cancer.jpg" />
     <Content Include="img\horoscopo\capricornio.jpg" />
     <Content Include="img\horoscopo\escorpio.jpg" />
+    <Content Include="img\horoscopo\fondohoros.jpg" />
     <Content Include="img\horoscopo\geminis.jpg" />
     <Content Include="img\horoscopo\indefinido.jpg" />
     <Content Include="img\horoscopo\leo.jpg" />
