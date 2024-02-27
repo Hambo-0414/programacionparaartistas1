@@ -5,12 +5,31 @@
     <title>Ejercicio de IMC</title>
     <script>
 
-        for (var kg = 10; kg <= 200; kg += 1) {
-            var altura = 1.70
+        for (var kg = 10; kg <= 200; kg += 10) {
+            var altura = 1.70;
             var IMC = kg / altura ** altura;
-            console.log("")
+            var indiceDeMasa;
+
+            console.log("El IMC de una persona con altura de" + altura + "y peso de" + kg + "kilos" + "es de" + IMC + "obteniendo una categoria de" + nivelDePeso);
         }
 
+        function nivelDePeso() {
+
+            if (IMC < 18.5) {
+                nivelDePeso = "Bajo peso";
+            }
+            else if (IMC > 18.5 && IMC <= 24.9); {
+                nivelDePeso = "Peso normal";
+            }
+             if (IMC >= 25 && IMC <= 29.9) {
+                nivelDePeso = "Sobrepeso";
+            }
+            else if (IMC >= 30 && IMC >= 50) {
+                nivelDePeso = "Obesidad"; 
+            }
+        }
+
+      
 
 
     </script>
