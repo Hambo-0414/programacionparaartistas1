@@ -7,28 +7,27 @@
 
         for (var kg = 10; kg <= 200; kg += 10) {
             var altura = 1.70;
-            var IMC = kg / altura ** altura;
-            var indiceDeMasa;
+            var IMC = kg / (altura ** 2);
+           
 
-            console.log("El IMC de una persona con altura de" + altura + "y peso de" + kg + "kilos" + "es de" + IMC + "obteniendo una categoria de" + nivelDePeso);
-        }
+            console.log("Tu altura es:" + altura + "m" + "tu peso es:" + kg + "kg" + "cuentas con un IMC de:" + IMC);
 
-        function nivelDePeso() {
+
 
             if (IMC < 18.5) {
-                nivelDePeso = "Bajo peso";
+                console.log("Bajo peso");
             }
-            else if (IMC > 18.5 && IMC <= 24.9); {
-                nivelDePeso = "Peso normal";
+            else if (IMC > 18.5 && IMC <= 24.9) {
+                console.log("Peso saludable");
             }
-             if (IMC >= 25 && IMC <= 29.9) {
-                nivelDePeso = "Sobrepeso";
+            else if (IMC >= 25 && IMC <= 29.9) {
+                console.log("Sobrepeso");
             }
-            else if (IMC >= 30 && IMC >= 50) {
-                nivelDePeso = "Obesidad"; 
+            else if (IMC >= 30 && IMC <= 50) {
+                console.log("obesidad");
             }
-        }
 
+        }
       
 
 
