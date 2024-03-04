@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ejercicio de arreglos y listas</title>
+    <script>
+
+        function calcularCalif() {
+            return 1; 
+        }
+
+        //declaracion explicita de un arreglo
+
+        var calificaciones = [8, 7, 10, 9, 5, 9, 7, 6]; 
+        console.log("Tamaño lista de califs:" + calificaciones.length);
+
+
+        //Formas de acceder/leer a los elementos
+
+        console.log("el primer elemento es:" + calificaciones[0]);
+
+        var ultimaCalif = calificaciones[calificaciones.length - 1];
+
+        console.log("El ultimo elemento es:" + ultimaCalif);
+
+        //formas de modificar elementos 
+
+        calificaciones[4] = 10;
+        calificaciones[2] = 3 + 5; 
+        calificaciones[1] = calificaciones[3]; 
+
+        var miCalif = 7;
+        calificaciones[4] = miCalif;
+        calificaciones[2] = calcularCalif(); //asignarle el resultado de la función 
+
+        //esto muestra en la consola el contenido de la lista 
+
+        console.log(calificaciones);
+
+        //recorremos un arreglo usando ciclos for 
+
+        for (let i = 0; i < calificaciones.length; i++) {
+            console.log("Pos" + i + "contiene" + calificaciones[i]); 
+        }
+
+        //asumiendo que son numeros, sin importar de que se trate, podemos sacar el promedio 
+
+        function calcularPromedio(arreglo) {
+            var suma = 0;
+            for (var i = 0; i < arreglo.length; i++) {
+                suma += arreglo[i]; 
+            }
+            var prom = suma / arreglo.length;
+
+            return prom; 
+        }
+
+        var promedioCalifs = calcularPromedio(calificaciones);
+        console.log("promedio de califs:" + promedioCalifs); 
+
+        var alturas=[1.7, 1.9, 1.69, 0.96];
+        var promAlturas = calcularPromedio(alturas);
+        console.log("Prom de alturas: " + promAlturas);
+
+        console.log("Prom costos:") + calcularPromedio([19, 99, 10, 50, 34.0]);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
