@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Examen IF-s</title>
+    <script>
+		/*
+			Declara una variable llamada viajero
+			que contenga una estructura con los atributos:
+			nombre, edad y cantidad de efectivo.
+			Asigna valores a cada una.
+		*/
+		var viajero=  {
+
+			nombre: "Hambo",
+			edad: 25,
+			cantidadDeEfectivo:1500 
+        }
+
+		/*
+			Declara una variable llamada tarjeta Metrobús
+			que contenga una estructura con los atributos:
+			día expiración y saldo. Asigna valores a cada uno.
+		*/
+		var tarjetaMetrobus = {
+			diaExpiración: "15 de abril 2026",
+			saldo:30
+        }
+
+		/*
+			Declara una variable llamada autobús que contenga
+			una estructura con los atributos: cantidad de
+			pasajeros y numero de ruta. Asigna valores a cada uno.
+		*/
+		var autobus = {
+			cantidadDePasajeros: 55,
+			numeroDeRuta:67, 
+        }
+
+		/*
+			Declara una variable llamada día de hoy y asígnale
+			el número de día de hoy.
+		*/
+		var diaDeHoy =("06 de marzo de 2024"); 
+
+		/*
+			Imprime en console cada una de las variables antes declaradas.
+		*/
+		console.log(viajero);
+		console.log(tarjetaMetrobus);
+		console.log(autobus);
+		console.log(diaDeHoy); 
+
+		/*
+			Declara una función llamada recargar saldo que reciba una
+			cantidad, se la sume al saldo de la tarjeta de metrobus
+			y asigne el día actual más 30 a la fecha de expiración
+			y muestre en pantalla el saldo nuevo.
+		*/
+
+        var saldoCantidad 
+		function recargarSaldo(saldoCantidad + tarjetaMetrobus);
+			
+        
+		
+
+		/*
+			Escribe un bloque if que valide si la fecha de expiración
+			de la tarjeta de metrobus es menor a la fecha actual.
+			En caso de que si, invoca a la función para recargar
+			saldo mandándole 100 pesos.
+		*/
+
+		if (tarjetaMetrobus.diaExpiración < diaDeHoy) {
+			recargarSaldo(100); 
+        }
+
+		/*
+			Declara una variable llamada costo de boleto.
+			Si la edad del viajero es mayor o igual a 60,
+			asígnale 5. Si no, asígnale 10
+		*/
+		var costoDeBoleto
+
+		if (viajero.edad >= 60) {
+			costoDeBoleto=costoDeBoleto + 5;
+		}
+
+		else {
+		    costoDeBoleto=costoDeBoleto + 10; 
+        }
+		/*
+			Verifica si el saldo en la tarjeta es mayor o
+			igual al costo del boleto. En caso de que no
+			invoca a la función para recargar saldo mandándole 50 pesos.
+		*/
+		if (tarjetaMetrobus.saldo >= costoDeBoleto) {
+
+		}
+		else {
+			recargarSaldo(50); 
+        }
+
+		/*
+			Verifica si la ruta del autobús es igual a 10 y la cantidad
+			de pasajeros sea menor a 30. En caso de que si, escribe
+			el mensaje “abordando autobús.” En caso de que no,
+			escribe el mensaje “esperaré al siguiente autobús”.
+		*/
+
+        if (autobus.numeroDeRuta == 10, autobus.cantidadDePasajeros < 30) {
+			console.log("Abordando autobús"); 
+		}
+		else {
+			console.log("Esperaré el siguiente autobús"); 
+        }
+
+		//Fin
+    </script>
+</head>
+<body>
+
+</body>
+</html>
