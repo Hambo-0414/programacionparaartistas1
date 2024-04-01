@@ -98,6 +98,7 @@
     <Content Include="img\personajes\GMGFDFS.png" />
     <Content Include="img\personajes\HTRWW.png" />
     <Content Include="peleaDnD.html" />
+    <Content Include="practica-dialogo.html" />
     <Content Include="RelacionesdeEstructuras.html" />
     <Content Include="tablas-de-multiplicar.html" />
     <Content Include="Web.config" />
