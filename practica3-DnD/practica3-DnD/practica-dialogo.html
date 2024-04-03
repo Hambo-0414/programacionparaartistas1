@@ -3,15 +3,80 @@
 <head>
     <meta charset="utf-8" />
     <title>Práctica de diálogo JS</title>
+
+    
+
     <script>
 
-        var dialogo = {
-            personaje: "Enrique",
-            color: #
+        var dialogo = [
+            {
+                personaje: "Enrique",
+                color: "#B47B84",
+                texto: "Tu matrimonio ya estaba roto mucho antes de mí, Maximiliano, así que no me culpes para absolberte del problema"
+            },
+            {
+                personaje: "Maximiliano",
+                color: "#6D2932",
+                texto: "(soltando una ligera risa sarcástica, se levanta de la silla) ¿Absolberme?, antes de tí todo estaba bien. Cumplia con mis obligaciones, era un buen esposo y respetaba a esta familia (declaró con voz áspera y un tono fuerte)"
+            },
+            {
+                personaje: "Enrique",
+                color: "#B47B84",
+                texto: "(los ojos se le empiezan a llenar de lágrimas y comienza a acercarse al escritorio para así colocar ambas manos sobre la superficide de madera) No te engañes Maximiliano, no eras buen esposo, tanto que ni siquiera soportas tocarla para poder tener hijos (susurro justo frente al rostro contrario mientras de a poco las lagrimas caían por sus mejillas"
+            },
+            {
+                personaje: "Maximiliano",
+                color: "#6D2932",
+                texto: "(quedandose estupefacto ante las palabras de Enrique, Maximiliano aprieta los dientes debido al enojo que crece en él) El amor que tengo por ti no te da derecho a hablar de ese tema a la ligera, conoce tu lugar Enrique y deja de deshonrar a tu propia hermana (alejandose del escritorio, rodea el mismo hasta quedar a centimetros de Enrique, acto seguido lo toma de los hombros fuertemente)"
+            },
+            {
+                personaje: "Enrique",
+                color: "#B47B84",
+                texto: "¿hermana?, esa mujer no merece ni siquiera un nombramiento respetuoso de mi parte (mirando a los ojos a Maximiliano, colocó ambas manos en cada mejilla del rostro contrario) Nos quitó nuestra intimidad, nuestro derecho a decidir cuándo y cómo los demás se enterarían de lo nuestro (las lagrimas continuan cayendo por sus mejillas)"
+            },
+            {
+                personaje: "Maximiliano",
+                color: "#6D2932",
+                texto: "(completamente estupefacto, Maximiliano aprieta con fuerza los hombros del contrario) Estás siendo egoista e insensato, nosotros le quitamos la familia que tenía y la obligamos a esto... ¿Decisión?. Despierta Enrique, no somos más que amantes y ella es mi esposa, aunque no la ame su comportamiento está justificado por el dolor que le provocamos"
+            },
+            {
+                personaje: "Enrique",
+                color: "#B47B84",
+                texto: "(removiéndose entre los brazos contrarios debido al dolor del agarre, Enrique desvía la mirada) claro, solo somos amantes. Entonces regresa a casa y juega a la familia feliz. igual a como lo has estado haciendo todos estos años (soltándose del agarre, Enrique retrocede, recoge sus cosas y sale por la puerta)"
+            },
+
+
+        ];
+
+        var indiceDeDiálogo = 0;
+        
+        function leerSiguiente() {
+            if (indiceDeDiálogo < dialogo.length) {
+                var dialogoActual = dialogo[indiceDeDiálogo];
+                label.innerHTML = dialogo.personaje;
+              
+                console.log(dialogoActual.personaje + ":" + dialogoActual.texto);
+                indiceDeDiálogo++;
+            }
+            else {
+                alert("Fin del diálogo");
+                return;
+            }
+
         }
+
+        leerSiguiente()
+
     </script>
 </head>
 <body>
+    
+    <button onclick="leerSiguiente()">CONTINUAR</button>
+
+    <div id="contenedorDiálogo" className="itemDialogo"></div>
+    
+    
+    
 
 </body>
 </html>
