@@ -3,8 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <title>Práctica de diálogo JS</title>
+    <style>
+        .itemDialogo {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
 
-    
 
     <script>
 
@@ -49,12 +55,25 @@
         ];
 
         var indiceDeDiálogo = 0;
-        
+        var contenedorDialogo;
+
         function leerSiguiente() {
             if (indiceDeDiálogo < dialogo.length) {
                 var dialogoActual = dialogo[indiceDeDiálogo];
-                label.innerHTML = dialogo.personaje;
-              
+                var itemDialogo = document.createElement("div");
+                itemDialogo.className = "itemDialogo";
+
+                var label = document.createElement("label");
+                label.innerHTML = dialogoActual.personaje;
+                itemDialogo.appendChild(label);
+
+                var p = document.createElement("p");
+                p.innerHTML = dialogoActual.texto;
+                itemDialogo.appendChild(p);
+
+                contenedorDiálogo.appendChild(itemDialogo);
+               
+
                 console.log(dialogoActual.personaje + ":" + dialogoActual.texto);
                 indiceDeDiálogo++;
             }
@@ -65,18 +84,21 @@
 
         }
 
-        leerSiguiente()
+        document.addEventListener("DOMContentLoaded", function () {
+            contenedorDiálogo = document.getElementById("contenedorDiálogo");
+            document.getElementById("continuarBtn").addEventListener("click", leerSiguiente);
+        });
 
     </script>
 </head>
 <body>
-    
+
     <button onclick="leerSiguiente()">CONTINUAR</button>
 
     <div id="contenedorDiálogo" className="itemDialogo"></div>
-    
-    
-    
+
+
+
 
 </body>
 </html>
