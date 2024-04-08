@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Pràctica de diàlogo</title>
+    <script>
+
+        var dialogo = [
+            {
+                personaje: "Banzai",
+                color: "#124076",
+                texto: "Chispas, ese Mufasa, no me podré sentar en una semana",
+            },
+            {
+                personaje: "Ed",
+                color: "#7F9F80",
+                texto: "(ríe a carcajadas)",
+            },
+            {
+                personaje: "Banzai",
+                color: "#124076",
+                texto: "ah ya cállate (golpea a Ed y este cae lentamente)",
+            },
+
+        ];
+
+        var indiceDialogo = 0;
+
+        function leerSiguiente() {
+            if (indiceDialogo >= dialogo.length); {
+                alert("Se acabó");
+                return;
+               
+            }
+
+            var entrada = dialogo[indiceDialogo];
+            console.log(entrada.personaje + ":" + entrada.texto);
+
+            var nuevoDIV = document.createElement("DIV");
+            nuevoDIV.className = "itemDialogo";
+            nuevoDIV.style = "background-color:" + entrada.color;
+
+
+            var etiquetaPersonaje = document.createElement("LABEL");
+            var párrafoTexto = document.createElement("P");
+
+            etiquetaPersonaje.innerHTML = entrada.personaje;
+            párrafoTexto.innerHTML = entrada.texto; 
+
+            nuevoDIV.appendChild(etiquetaPersonaje);
+            nuevoDIV.appendChild(pápárrafoTexto);
+
+            contenedorDialogo.appendChild(nuevoDIV);
+
+            indiceDialogo++;
+            
+        }
+    </script>
+
+    <style>
+
+        body {
+            background-color:#ECCA9C;
+            font-family:Verdana;
+            color:#222222;
+        }
+
+        #contenedorDialogo {
+            border: 1px solid #AFD198;
+            background-color:#E8EFCF;
+            max-width:0 auto; 
+            margin: 0 auto;
+        }
+
+        #itemDialogo {
+            border: 1px solid #DBA979;
+            margin:5px;
+            padding:3px;
+            border-radius:0 5px 5px 5px;
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <center>
+        <button id="boton" onclick="leerSiguiente()">CONTINUAR</button>
+    </center>
+    
+
+    <div id="contenedorDialogo">
+        
+    </div>
+
+</body>
+</html>
