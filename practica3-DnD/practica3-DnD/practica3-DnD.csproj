@@ -75,6 +75,10 @@
     <Content Include="ejerciciosdecondiciones.html" />
     <Content Include="examen2.html" />
     <Content Include="IMC-ejercicios.html" />
+    <Content Include="img\personaje\Banzai.jpg" />
+    <Content Include="img\personaje\Ed.jpg" />
+    <Content Include="img\personaje\Scar.jpg" />
+    <Content Include="img\personaje\Shenzi.jpg" />
     <Content Include="img\horoscopo\acuario.jpg" />
     <Content Include="img\horoscopo\aries.jpg" />
     <Content Include="img\horoscopo\cancer.jpg" />
